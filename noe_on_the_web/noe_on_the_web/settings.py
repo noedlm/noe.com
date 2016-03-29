@@ -80,6 +80,21 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+    # 'postgresql': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'little_mac',
+    #     'USER': '',
+    #     'PASSWORD': '',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '5432',
+    # },
+    # 'MSSQL': {
+    #     'NAME': 'noedb',
+    #     'ENGINE': 'sqlserver_ado',
+    #     'HOST': '127.0.0.1\\ss2012',
+    #     'USER': 'pestweb',
+    #     'PASSWORD': 'tinymite6',
+    # }
 }
 
 
