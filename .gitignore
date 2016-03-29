@@ -193,6 +193,7 @@ $RECYCLE.BIN/
 # Packages
 *.egg
 *.egg-info
+.idea/
 dist/
 build/
 eggs/
