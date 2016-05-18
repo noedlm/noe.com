@@ -1,6 +1,7 @@
 Personal_Site
 =============
-A website about me and all of my awesomeness!!
+Just a personal website. Content of it yet to be determined.
+Built using the Django framework.
 
 Setup
 ======
