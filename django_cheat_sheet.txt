@@ -1,0 +1,24 @@
+/**********************************************************************************************************************/
++ Personal Django Cheat Sheet
++ Author: Noé De La Mora
++ Date: 10/25/2016
+/**********************************************************************************************************************/
+
+--------------------------------------Section 1: manage.py frequently used commands-------------------------------------
+NOTE: Obviously the python manage.py commands have to be run from the location where manage.py is. That is the root
+directory of the project itself. Adding the 'C:\\>' to the commands is just to signify that they are being run from the
+command prompt.
+
+[C:\\>python manage.py runserver]
+^^^^^
+Command used to startup the built-in python development server. By default it is
+hosted on port:8000 (localhost:8000 or 127.0.0.1:8000)
+
+[C:\\>python manage.py runserver 8080]
+^^^^^
+Adding the port parameter to the command will bring up the local server in the specified port number, port:8080 in this
+example.
+
+[C:\\>python manage.py runserver 0.0.0.0:8000]
+^^^^^
+This makes the local server public to all computers in the network. Handy to test on mobile devices or to showoff.
