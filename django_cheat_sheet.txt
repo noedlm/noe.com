@@ -22,3 +22,20 @@ example.
 [C:\\>python manage.py runserver 0.0.0.0:8000]
 ^^^^^
 This makes the local server public to all computers in the network. Handy to test on mobile devices or to showoff.
+
+[C:\\>python manage.py migrate]
+^^^^^
+This looks at INSTALLED APPS in settings.py and creates the necessary tables in the database
+
+[C:\\>python manage.py makemigrations {app directory name}
+^^^^^
+This creates migrate scripts for newly created or updated models within the django app. These migrations are stored in the app’s migration folder
+
+[C:\\>python manage.py sqlmigrate {app dir(polls)} {migration script number(0001)}]
+^^^^^
+This returns the sql that django would run to migrate the models into the database schema
+
+[C:\\>python manage.py check]
+^^^^^
+this checks for any problems in your project without making migrations or touching the database
+
