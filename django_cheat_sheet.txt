@@ -39,3 +39,6 @@ This returns the sql that django would run to migrate the models into the databa
 ^^^^^
 this checks for any problems in your project without making migrations or touching the database
 
+[C:\\>python manage.py shell]
+^^^^^
+invokes the python shell
