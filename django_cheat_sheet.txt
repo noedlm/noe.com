@@ -42,3 +42,7 @@ this checks for any problems in your project without making migrations or touchi
 [C:\\>python manage.py shell]
 ^^^^^
 invokes the python shell
+
+[C:\\>python manage.py createsuperuser]
+^^^^^
+creates a super user. This will ask you to enter a username, email and password. The user credentials are for Django’s models’ admin site to manage content.
