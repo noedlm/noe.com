@@ -151,4 +151,4 @@ except ImportError:
 try:
     SECRET_KEY = os.getenv('SECRET_KEY')
 except NameError:
-    print "os.getenv('SECRET_KEY') is not defined for some reason, wth!"
+    print("os.getenv('SECRET_KEY') is not defined for some reason, wth!")
