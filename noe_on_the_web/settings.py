@@ -20,8 +20,6 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'bjfwy=xop73bzrx2cx6ay@chkmu80g4fxc33wm%mspz6l0!-2e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -142,3 +140,10 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'polls/static/'),
     os.path.join(BASE_DIR, 'static/'),
 )
+
+
+# local settings
+from local_settings import *
+
+if not SECRET_KEY:
+    raise Exception('provide SECRET_KEY value in local_settings.py')
