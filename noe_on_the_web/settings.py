@@ -143,7 +143,12 @@ STATICFILES_DIRS = (
 
 
 # local settings
-from local_settings import *
+try:
+    from noe_on_the_web.local_settings import *
+except ImportError:
+    pass
 
-if not SECRET_KEY:
-    raise Exception('provide SECRET_KEY value in local_settings.py')
+if not SECRET_KEY and os.getenv('SECRET_KEY'):
+    SECRET_KEY = os.getenv('SECRET_KEY')
+elif not SECRET_KEY and not os.getenv('SECRET_KEY'):
+    raise Exception('provide SECRET_KEY value in local_settings.py or define os.env["SECRET_KEY"] = [key]')

@@ -1,3 +1,4 @@
+import os
 import requests
 
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
@@ -13,5 +14,6 @@ from django.shortcuts import render
 def index(request):
     url = 'http://httpbin.org/get'
     r = requests.get(url)
-    return HttpResponse(r.text)
+    blizz = os.getenv('BLIZZARD_WEB_API_URL')
+    return HttpResponse(blizz)
 
