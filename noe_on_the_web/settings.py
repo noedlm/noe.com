@@ -148,7 +148,7 @@ try:
 except ImportError:
     pass
 
-if not SECRET_KEY and os.getenv('SECRET_KEY'):
+try:
     SECRET_KEY = os.getenv('SECRET_KEY')
-elif not SECRET_KEY and not os.getenv('SECRET_KEY'):
-    raise Exception('provide SECRET_KEY value in local_settings.py or define os.env["SECRET_KEY"] = [key]')
+except NameError:
+    print "os.getenv('SECRET_KEY') is not defined for some reason, wth!"
