@@ -74,28 +74,23 @@ WSGI_APPLICATION = 'noe_on_the_web.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
+import dj_database_url
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-    # 'postgresql': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'little_mac',
-    #     'USER': '',
-    #     'PASSWORD': '',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '5432',
-    # },
-    # 'MSSQL': {
-    #     'NAME': 'noedb',
-    #     'ENGINE': 'sqlserver_ado',
-    #     'HOST': '127.0.0.1\\ss2012',
-    #     'USER': 'pestweb',
-    #     'PASSWORD': 'tinymite6',
-    # }
-}
+DATABASES = {'default': dj_database_url.config()}
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+#     # 'MSSQL': {
+#     #     'NAME': 'noedb',
+#     #     'ENGINE': 'sqlserver_ado',
+#     #     'HOST': '127.0.0.1\\ss2012',
+#     #     'USER': 'pestweb',
+#     #     'PASSWORD': '',
+#     # }
+# }
 
 
 # Password validation
